@@ -1,0 +1,76 @@
+
+:root {
+  --primary-color: #646cff; /* Define primary color */
+  --secondary-color: #61dafbaa; /* Define secondary color */
+  --text-color: #213547; /* Define primary text color */
+  --muted-color: #888;  /* Define muted text color */
+  --background-color: #fff; /* Set a background color */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Define a shadow color */
+}
+
+
+body {
+  background-color: var(--background-color); /* Apply background to the whole body */
+  color: var(--text-color);
+  font-family: sans-serif; /* Add a default font-family */
+  line-height: 1.6; /* Improves readability of text */
+}
+
+#root {
+  max-width: 1200px; /* Slightly reduced max-width for better balance */
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter; /*Keeps the browser optimized for changes to filter*/
+  transition: filter 0.3s ease-in-out; /* Smoother transition */
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 1em var(--primary-color)); /* Reduced shadow size, use primary color */
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 1em var(--secondary-color)); /* Reduced shadow size, use secondary color */
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Apply animation directly to the logo, not through the a tag */
+  .logo.react {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  border-radius: 8px; /* Slightly rounded corners */
+  background-color: #fff; /* Ensures card is visible */
+  box-shadow: 0 2px 8px var(--shadow-color); /* Subtle shadow for depth */
+}
+
+.read-the-docs {
+  color: var(--muted-color);
+}
+
+a {
+  color: var(--primary-color); /* Make links more prominent */
+  text-decoration: none; /*Remove underline for a cleaner look*/
+}
+
+a:hover {
+  text-decoration: underline;  /* Add it back on hover for usability */
+}
+
